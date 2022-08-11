@@ -1,0 +1,6 @@
+<nav id="navbarWrapper">
+  <button type="button" id="{{Navigations.name}}" *ngFor="let Navigations of navigationsArray" (click)="route(Navigations.path)" (mouseenter)="showButtonName(Navigations.name)" (mouseleave)="setImgBack(Navigations.name, Navigations.imgSrc)">
+    <img src="{{Navigations.imgSrc}}" alt="{{Navigations.name}}">
+  </button>
+  <input id="searchBar" type="text" [formControl]="search" placeholder="What are you looking for?">
+</nav>

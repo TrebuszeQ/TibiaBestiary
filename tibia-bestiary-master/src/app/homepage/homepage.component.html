@@ -1,0 +1,23 @@
+<div id="detailsWrapper">
+  <div>
+  </div>
+</div>
+
+<div id="contentWrapper">
+  <ul id="mainContent">
+    <li *ngFor="let Category of categoryArray">
+      <button type="button" id="{{Category.categoryName}}Button" (click)="openCategory(Category.categoryName)" (mouseenter)="categoryDetails(Category.categoryName, Category.categorySize)" (mouseleave)="setImageBack(Category.categoryName, Category.imageSrc)">
+        <img src="{{Category.imageSrc}}" alt="{{Category.categoryName}}">
+      </button>
+    </li>
+  </ul>
+  <aside id="asideWrapper">
+    <ul id="asideMenu">
+      <li *ngFor="let Category of categoryArray">
+        <button type="button" id="{{Category.categoryName}}ButtonAside" (click)="openCategory(Category.path)" (mouseenter)="categoryDetails(Category.categoryName, Category.categorySize)" (mouseleave)="setImageBack(Category.categoryName, Category.imageSrc)"> <h2>{{Category.categoryName | uppercase}}</h2>
+        </button>
+      </li>
+    </ul>
+  </aside>
+</div>
+

@@ -1,0 +1,12 @@
+#footerWrapper
+{
+  z-index: 1;
+  display: grid;
+  grid-template-rows: 50vh;
+  grid-template-columns: 90vw;
+  position: relative;
+  float: left;
+  padding: 5vw;
+  background-color: #22366d;
+  box-sizing: border-box;
+}

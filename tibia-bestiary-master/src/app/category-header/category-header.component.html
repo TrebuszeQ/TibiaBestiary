@@ -1,0 +1,24 @@
+<div id="headerWrapper" class="wrapper" [ngSwitch]="path">
+    <div *ngSwitchCase="path" id="switchWrapper" class="wrapper">
+
+      <div class="wrapper titleWrapper">
+        <h1>{{categoryArray[getIndice()].categoryName}}</h1>
+      </div>
+      <div>
+      </div>
+      <h2 class="futuredMonsterH2">Futured monster</h2>
+      <h2 class="descriptionH2">Description</h2>
+      <h2 class="numbersH2">Some numbers</h2>
+      <div class="wrapper futuredWrapper">
+        <img src="{{categoryArray[getIndice()].imageSrc}}" alt="{{categoryArray[getIndice()].categoryName}}"> <br>
+        <p>{{categoryArray[getIndice()].futuredName}}</p> <br>
+      </div>
+        <p class="longText description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan ac turpis sit amet scelerisque. Cras non quam neque. Vivamus facilisis placerat velit nec accumsan. Ut dignissim metus elit, et porttitor urna bibendum eget. Quisque sapien nibh, ultricies ac neque vel, gravida malesuada nulla. Vivamus id nulla eu nunc elementum convallis nec sed nibh. Aenean quam metus, condimentum quis neque quis, mollis venenatis urna.
+        </p>
+        <p class="someNumbers">
+          Monsters known: {{categoryArray[getIndice()].categorySize}}<br>
+          Bosses known: <br>
+        </p>
+    </div>
+</div>
